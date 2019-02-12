@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { Grid, Paper } from '@material-ui/core';
 
-import CollectionsWidget from './collections-widget.component';
+import CollectionsWidget from './collections-widget.container';
 
 class Dashboard extends Component {
     render() {
