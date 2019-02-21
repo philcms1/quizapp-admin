@@ -4,7 +4,5 @@
 import * as actionTypes from '../actionTypes';
 
 export const initCollections = () => {
-  return dispatch => {
-      dispatch({ type: actionTypes.COLLECTIONS_FETCH });
-  }
+  return { type: actionTypes.COLLECTIONS_FETCH }
 };

@@ -5,7 +5,7 @@ import { Map } from 'immutable';
 
 import * as actionTypes from '../actionTypes';
 
-const INITIAL_STATE = { data: Map(), error: null, loading: true };
+export const INITIAL_STATE = { data: Map(), error: null, loading: true };
 
 const setCollections = (arrayCollections) => {
     return Map(arrayCollections.map(collection => ([collection.uid, collection])));
@@ -16,7 +16,7 @@ const CollectionsReducer = (state = INITIAL_STATE, action) => {
         case actionTypes.COLLECTIONS_FETCH_SUCCESS:
             return { ...state, data: setCollections(action.payload), loading: false };
         case actionTypes.COLLECTIONS_FETCH_FAILED:
-            return { ...state, error: action.message, loading: false };
+            return { ...state, data: Map(), error: action.message, loading: false };
         default:
             return state;
     }

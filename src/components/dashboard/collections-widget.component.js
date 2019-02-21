@@ -4,19 +4,28 @@
 import React from 'react';
 import { Table, TableBody, TableRow, TableCell, CircularProgress } from '@material-ui/core';
 
-const collectionsWidget = (props) => {
+const CollectionsWidget = (props) => {
 
-    // TODO: use Sagas
+    // TODO: customize properly the error message and extract it to reusable UI component
     if (props.error) {
         return <div>Something went wrong...</div>
     }
 
-    // TODO: customize properly the spinner
+    // TODO: customize properly the spinner and extract it to reusable UI component
     if (props.loading) return (
         <div>
             <CircularProgress color="secondary"/>
         </div>
     );
+
+    // TODO: customize properly the no data message and extract it to reusable UI component
+    if (props.collections.length === 0) {
+        return (
+            <div>
+                No data to display...
+            </div>
+        )
+    }
 
     return (
         <Table>
@@ -34,4 +43,4 @@ const collectionsWidget = (props) => {
     )
 };
 
-export default collectionsWidget
+export default CollectionsWidget
