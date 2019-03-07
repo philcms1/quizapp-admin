@@ -9,8 +9,8 @@ class NavBar extends Component {
             <Menu inverted fixed="top" className="main-nav">
                 <Container className="main-nav__items">
                     <Menu.Item header className="main-nav__item">
-                        <img src="assets/logo.png" alt="logo" />
-                        HP Trivia
+                        <img src="assets/logo.png" alt="logo"/>
+                        HP Trivia Admin
                     </Menu.Item>
                     <Menu.Item name="Collections" className="main-nav__item"/>
                     <Menu.Item>
